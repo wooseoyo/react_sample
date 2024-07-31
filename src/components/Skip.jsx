@@ -3,13 +3,13 @@ import React from 'react'
 const Skip = () => {
     return (
         <div id='skip'>
-            <a href="#header">헤더영역바로가기</a>
-            <a href="#intro">인트로영역바로가기</a>
-            <a href="#skill">스킬영역바로가기</a>
-            <a href="#site">사이트영역바로가기</a>
-            <a href="#port">포트폴리오영역바로가기</a>
-            <a href="#contact">연락처영역바로가기</a>
-            <a href="#푸터">푸터영역바로가기</a>
+            <a href="#header">헤더영역 바로가기</a>
+            <a href="#intro">인트로영역 바로가기</a>
+            <a href="#skill">스킬영역 바로가기</a>
+            <a href="#site">사이트영역 바로가기</a>
+            <a href="#port">포트영역 바로가기</a>
+            <a href="#contact">연락처영역 바로가기</a>
+            <a href="#footer">푸터영역 바로가기</a>
         </div>
     )
 }

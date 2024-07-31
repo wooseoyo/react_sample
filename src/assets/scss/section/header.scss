@@ -15,16 +15,17 @@
         text-align: center;
         line-height: 1;
 
-        a{
-            em{
-                display: block;
-                font-size: 13px;
-            }
+        em{
+            display: block;
+            font-size: 13px;
         }
+        
     }
     .header_nav{
+
         &.show{
             display: block;
+
             ul{
                 position: absolute;
                 right: 0;
@@ -32,6 +33,7 @@
                 background-color: var(--subBg300);
                 backdrop-filter: blur(15px);
                 padding: 20px;
+
                 li{
                     display: block;
                     text-align: right;
@@ -43,56 +45,62 @@
                 }
             }
         }
+
         @media(max-width:800px){
             display: none;
         }
-        ul{
+        
             li{
                 display: inline;
 
+
+               
                 a{
-                    display: inline;
+                    display: inline-block;
                     font-size: 14px;
                     padding: 15px;
                     text-transform: uppercase;
                     position: relative;
-
+                    
+                 
                     &::before{
                         content: "";
-                        width: calc(100% - 28px);
+                        width: calc( 100% - 28px);
                         height: 1px;
                         background-color: var(--black);
                         position: absolute;
                         left: 14px;
                         bottom: 10px;
                         transform: scale(0);
-                        transition: all 0.3s;
+                        transform-origin: left center;
+                        transition: transform 0.3s;
                     }
+
                     &:hover::before{
                         transform: scale(1);
                     }
                 }
             }
-        }
+       
     }
-    .header_nav_mobile{
-        @media(max-width:800px){
-            display: block;
-        }
+    .header_nav_moblie{
         display: none;
         width: 40px;
         height: 40px;
         cursor: pointer;
-        // background-color: gainsboro;
-        
+       
+        @media(max-width:800px){
+            display: block;
+        }
+
         span{
             display: block;
             width: 40px;
-            height: 1px;
+            height: 2px;
             background-color: var(--black);
             margin-top: 19px;
             position: relative;
-            
+
             &::before{
                 content: "";
                 width: 40px;
@@ -101,7 +109,7 @@
                 position: absolute;
                 right: 0;
                 top: 6px;
-                transform: width 0.3s;
+                transition: width 0.3s;
             }
             &::after{
                 content: "";
@@ -109,11 +117,10 @@
                 height: 2px;
                 background-color: var(--black);
                 position: absolute;
-                right: 0;
+                left: 0;
                 bottom: 6px;
-                transform: width 0.3s;
+                transition: width 0.3s;
             }
-
         }
         
     }
