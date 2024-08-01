@@ -27,10 +27,9 @@ const Skill = () => {
         <div className="skill_desc">
           {skillText.map((skill, key) => (
             <div key={key}>
-              <span>1.</span>
-              <h3></h3>
-              <p>
-              </p>
+              <span>{key + 1}</span>
+              <h3>{skill.title}</h3>
+              <p>{skill.desc}</p>
             </div>
           ))}
 
